@@ -1,10 +1,12 @@
 # Configurations
-title:            Han chunsik`s docs
+title:            Han chunsik`s books
 longtitle:        📖
 author:           한춘식
 email:            vpdrnls96@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
+
+github_username: han-chunsik
 
 version:          1.0
 gitbook_version:  3.2.3

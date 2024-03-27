@@ -125,10 +125,10 @@
 
 @media (max-width: 1240px) {
     #book-search-input {
-        display: none;
+        display: block;
     }
     #book-search-input-link {
-        display: block;
+        display: none;
     }
 }
 
