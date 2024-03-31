@@ -6,15 +6,9 @@ category: books
 layout: post
 ---
 
-```yaml
-toc:
-    enabled: true
-```
-
-책 소개
+책 정보
 -------------
-[책 정보][https://www.yes24.com/Product/Goods/109182479?pid=123487&cosemkid=go16527542090906292&gad_source=1&gclid=Cj0KCQjwk6SwBhDPARIsAJ59GwcsarMNP-zpK97jiVfywZ2WMeJAOpajehxYm3SrTd_aEUR-G--hzdEaAvRqEALw_wcB]
-
+[구글 엔지니어는 이렇게 일한다](https://github.com/saseungmin/reading_books_record_repository/tree/master/summarize_books_in_markdown/%ED%95%A8%EC%88%98%ED%98%95%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
 
 Part 1 전제 - 1. 소프트웨어 엔지니어링이란?
 -------------
