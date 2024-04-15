@@ -13,8 +13,8 @@ layout: post
 
 Part 1 전제 - 1. 소프트웨어 엔지니어링이란?(p.41 ~ p.67)
 -------------
-_Software engineering is programming integrated over time_  
-_소프트웨어 엔지니어링은 흐르는 시간 위에서 순간순간의 프로그래밍을 모두 합산한 것이다_  
+_"Software engineering is programming integrated over time"_  
+_"소프트웨어 엔지니어링은 흐르는 시간 위에서 순간순간의 프로그래밍을 모두 합산한 것이다"_  
 
 **소프트웨어 엔지니어링에서 중요한 세가지**
 * time(시간) - 시간의 흐름과 언젠간 변경될 가능성
