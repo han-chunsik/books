@@ -4,7 +4,7 @@
 
 [자바 코드의 품질을 높이는 100가지 방법(~ing)](https://product.kyobobook.co.kr/detail/S000215892971)|[객체지향의 사실과 오해(~ing)](https://product.kyobobook.co.kr/detail/S000001628109)|제목|
 |:---:|:---:|:---:|
-|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791169213486.jpg" width="260" height="350"/> <br> [👀 MORE 👀](https://han-chunsik.github.io/books/books/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them.html)|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788998139766.jpg" width="260" height="350"/> <br> [👀 MORE 👀]()|책이미지|
+|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791169213486.jpg" width="260" height="350"/> <br> [👀 MORE 👀](https://han-chunsik.github.io/books/books/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them.html)|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788998139766.jpg" width="260" height="350"/> <br> [👀 MORE 👀](https://han-chunsik.github.io/books/books/2025-03-25-The_Essence_of_Object-Orientation.html)|책이미지|
 
 
 ## 독서로 성장하기 위한 규칙
