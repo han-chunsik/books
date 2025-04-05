@@ -3,10 +3,6 @@ layout: home
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-  }
   h1 {
     margin: 30px 0;
     font-size: 4em;
@@ -15,14 +11,5 @@ layout: home
   }
 </style>
 
-<div class="container">
-
-<div class="table-wrapper" markdown="block">
-
-- [자바 코드의 품질을 높이는 100가지 방법(~ing)](https://han-chunsik.github.io/books/books/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them.html)  
-- [객체지향의 사실과 오해(~ing)](https://han-chunsik.github.io/books/books/2025-03-25-The_Essence_of_Object-Orientation.html)
-
-
-</div>
-
-</div>
+- [자바 코드의 품질을 높이는 100가지 방법(~ing)](https://han-chunsik.github.io/books/books/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them.html)
+- [객체지향의 사실과 오해](https://han-chunsik.github.io/books/books/2025-04-02-The_Essence_of_Object-Orientation.html) 
