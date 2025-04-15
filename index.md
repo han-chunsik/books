@@ -13,7 +13,7 @@ layout: home
 
 ## Challenge
 ### 2025
-- [매일 아티클 읽기](https://han-chunsik.github.io/books/books/2025-04-09-daily_articles.html)
+- [매일 아티클 읽기 - 4월](https://han-chunsik.github.io/books/books/2025-04-09-daily_articles.html)
 - [매일 기술 면접 답변하기](https://han-chunsik.github.io/books/books/2025-04-09-daily_interview.html)
 
 ## Book

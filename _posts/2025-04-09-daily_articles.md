@@ -1,11 +1,12 @@
 ---
-title: 2025 챌린지 - 매일 아티클 읽기
+title: 2025 챌린지 - 매일 아티클 읽기 4월
 author: 한춘식
 date: 2025-04-09
 category: books
 layout: post
 toc:
     enabled: true
+mermaid: true
 ---  
 
 
@@ -15,6 +16,99 @@ toc:
 - [좋은 재시도, 나쁜 재시도](https://medium.com/yandex/good-retry-bad-retry-an-incident-story-648072d3cee6)
 - [엔지니어링 리더십의 다양한 스타일](https://blog.practicalengineering.management/different-styles-of-engineering-leadership-8f376ee6a406)
 - [‘kubectl create pod’를 실행하면 발생하는 일](https://medium.com/daangn/kubectl-create-pod%EB%A5%BC-%EC%8B%A4%ED%96%89%ED%95%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC-kube-apiserver-%EA%B0%90%EC%82%AC-%EB%A1%9C%EA%B7%B8-audig-log-%EB%A1%9C-%EC%97%BF%EB%B3%B4%EA%B8%B0-6f01487abdda)
+
+---
+
+<br>
+<br>
+<br>
+
+# 2025.04.15
+## 웹페이지를 표시한다는 것: 브라우저는 어떻게 동작하는가
+> - [링크](https://developer.mozilla.org/ko/docs/Web/Performance/Guides/How_browsers_work)    
+> - 출처: 웹사이트  
+> - 작성자/출판사: MDN Web Docs  
+
+### 핵심 내용 요약  
+빠른 사이트는 좋은 사용자 경험을 제공한다. 실제 성능 및 체감 성능을 향상시키는 방법을 이해하기 위해서는 브라우저의 동작 방식을 이해하는 것이 도움이 된다.  
+  
+브라우저가 웹 페이지를 표사하는 과정은 다음과 같다.  
+    
+1. 탐색 (Navigation)  
+- DNS 조회: 도메인 이름을 IP 주소로 변환  
+- TCP 연결: 3-way 핸드셰이크로 서버와 연결 구축  
+- TLS 협상: HTTPS 사용 시 보안 연결 설정  
+  
+2. 데이터 수신 (Response)   
+- 서버에서 HTML 파일 등의 요청 자원 다운로드
+- TCP 슬로우 스타트를 통한 데이터 전송 최적화
+  
+3. 구문 분석 (Parsing)
+- DOM 트리 구축: HTML을 구문 분석하여 DOM 트리 생성
+- 프리로드 스캐너: 우선순위가 높은 자원(CSS, JS, 폰트) 미리 요청
+- CSSOM 구축: CSS를 분석하여 스타일 객체 모델 생성
+- JavaScript 컴파일: 스크립트 처리 및 실행
+    
+4. 렌더링 (Render)
+- 스타일: DOM과 CSSOM을 결합하여 렌더 트리 생성
+- 레이아웃: 각 요소의 크기와 위치 계산
+- 페인트: 픽셀을 화면에 그리기
+- 합성: 여러 레이어를 적절한 순서로 결합
+  
+5. 상호작용 (Interactivity)
+- 페이지가 사용자 입력에 응답할 준비가 됨
+- TTI(Time to Interactive): 사용자와 상호작용 가능한 시점까지의 시간
+  
+a. 최적화 핵심 포인트  
+- 메인 스레드 부하 줄이기 (대부분의 브라우저는 싱글 스레드)
+- JavaScript 파일에 async/defer 속성 사용하기
+- 필요한 리소스는 같은 호스트에서 제공하여 DNS 조회 최소화
+- 이미지 크기를 미리 지정하여 리플로우 방지
+- 페이지 로딩과 상호작용성 모두를 고려한 최적화 필요
+
+```mermaid
+graph LR
+        PC[Client] --"1.DNS 조회"--> DNS[DNS Server]
+        DNS --"2.IP 주소 반환"--> PC
+        PC --"3.TCP: SYN"--> Site[Web Server]
+        Site --"4.TCP: SYN-ACK"--> PC
+        PC --"5.TCP: ACK"--> Site
+        PC --"6.TLS: ClientHello"--> Site
+        Site --"7.TLS: ServerHello & Certificate"--> PC
+        PC --"8.TLS: ClientKey"--> Site
+        Site --"9.TLS: Finished"--> PC
+```
+
+
+### 주요 개념/용어  
+- DNS 조회(DNS Lookup): 도메인 이름을 IP 주소로 변환하는 과정
+- TCP 핸드셰이크(TCP Handshake): 브라우저와 서버 간의 연결을 설정하는 3단계 과정(SYN-SYN-ACK)
+- TLS 협상(TLS Negotiation): HTTPS 연결을 위한 보안 핸드셰이크 과정
+- TTFB(Time to First Byte): 요청 후 첫 데이터 바이트를 받는 데 걸린 시간
+- 혼잡 제어(Congestion control): 네트워크 부하에 따라 데이터 전송량을 조절하는 메커니즘
+- TCP 슬로우 스타트(TCP Slow Start): 최대 네트워크 대역폭을 결정하기 위해 점진적으로 데이터 전송량을 늘리는 알고리즘
+- DOM(Document Object Model): HTML을 브라우저가 이해할 수 있는 객체 모델로 변환한 트리 구조
+- CSSOM(CSS Object Model): CSS를 브라우저가 이해할 수 있는 객체 모델로 변환한 트리 구조
+- 프리로드 스캐너(Preload scanner): DOM 트리 구축 중 병렬로 우선순위가 높은 자원을 미리 요청하는 기능
+- 렌더 트리(Render Tree): DOM과 CSSOM을 결합하여 화면에 표시될 요소들만 포함한 트리
+- 스타일(Style): DOM과 CSSOM을 결합하여 계산된 스타일 트리를 생성하는 과정
+- 레이아웃(Layout): 각 노드의 크기와 위치를 계산하는 과정
+- 리플로우(Reflow): 노드의 크기와 위치를 다시 계산하는 과정
+- 페인트(Paint): 계산된 레이아웃을 실제 화면의 픽셀로 변환하는 과정
+- 첫 번째 의미있는 페인트(First Meaningful Paint): 페인팅이 처음 일어나는 시점
+- 합성(Compositing): 여러 레이어를 올바른 순서로 화면에 그리는 과정
+- TTI(Time to Interactive): 페이지가 사용자와 상호작용할 준비가 될 때까지 걸리는 시간
+- 접근성 트리(Accessibility Tree): DOM을 기반으로 보조 기술을 위해 생성되는 의미적 구조(AOM)
+
+
+### 중요 포인트 
+"실제 성능 및 체감되는 성능을 향상시키는 방법을 이해하기 위해서 브라우저가 어떻게 동작하는지 이해하는 것이 도움이 됩니다."    
+   
+지피지기면 백전백승이라는 말처럼, 문제를 해결하거나 개선하려면 그 동작 원리를 이해하는 것이 중요하다.   
+
+### 고찰
+웹 페이지에 접속 했을 때, 간혹 CSS가 로딩되지 않거나 화면은 정상적으로 보이지만 상호작용이 되지 않는 상황을 몇 번 겪은 적이 있다. 이런 문제가 왜 발생하는지 동작 과정을 살펴보니 이해가 되기 시작했다.   
+그동안 당연하게 여겼던 것들이 사실은 복잡한 과정을 거쳐야 동작하는 것이란 걸 알게 되니 점점 더 내부 동작 방식에 관심이 생기고 깊이 있게 분석하고 싶다는 욕심이 생긴다.    
 
 ---
 
