@@ -1,12 +1,6 @@
 # 📖책읽고 내용 정리하기
 ## 👀책 정리: https://han-chunsik.github.io/books/  
 
-## Challenge
-### 2025
-- [매일 아티클 읽기 - 4월](https://han-chunsik.github.io/books/books/2025-04-09-daily_articles.html)
-- [매일 기술 면접 답변하기](https://han-chunsik.github.io/books/books/2025-04-09-daily_interview.html)
-
-
 ## Books
 
 [자바 코드의 품질을 높이는 100가지 방법(~ing)](https://product.kyobobook.co.kr/detail/S000215892971)|[객체지향의 사실과 오해](https://product.kyobobook.co.kr/detail/S000001628109)|제목|
@@ -52,7 +46,6 @@
 | ⭐⭐⭐⭐☆ (4) | 잘 이해함 — 내용 정리 가능, 일부는 설명도 가능 |
 | ⭐⭐⭐⭐⭐ (5) | 완벽하게 이해 — 다른 사람에게 설명하거나 글로 정리 가능할 정도 |
 
-
-
-
-
+## Challenge
+### 2025
+- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/books/2025-04-09-daily_articles.html)

@@ -13,9 +13,72 @@ mermaid: true
 # Keep
 - [AI 세계에서 DevOps의 미래](https://lablabs.io/blog/future-of-devops-in-the-world-of-ai)  
 - [7개월간의 자바/스프링 독학 회고](https://velog.io/@backfox/7%EA%B0%9C%EC%9B%94%EA%B0%84%EC%9D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%94%84%EB%A7%81-%EB%8F%85%ED%95%99-%ED%9A%8C%EA%B3%A0-2021.11-2022.07)  
-- [좋은 재시도, 나쁜 재시도](https://medium.com/yandex/good-retry-bad-retry-an-incident-story-648072d3cee6)
 - [엔지니어링 리더십의 다양한 스타일](https://blog.practicalengineering.management/different-styles-of-engineering-leadership-8f376ee6a406)
 - [‘kubectl create pod’를 실행하면 발생하는 일](https://medium.com/daangn/kubectl-create-pod%EB%A5%BC-%EC%8B%A4%ED%96%89%ED%95%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC-kube-apiserver-%EA%B0%90%EC%82%AC-%EB%A1%9C%EA%B7%B8-audig-log-%EB%A1%9C-%EC%97%BF%EB%B3%B4%EA%B8%B0-6f01487abdda)
+
+
+---
+
+<br>
+<br>
+<br>
+
+# 2025.04.25
+## 좋은 재시도, 나쁜 재시도(Good Retry, Bad Retry: An Incident Story)
+> - [링크](https://medium.com/yandex/good-retry-bad-retry-an-incident-story-648072d3cee6)
+> - 출처: 웹사이트
+> - 작성자/출판사: Denis Isaev
+
+### 핵심 내용 요약  
+이 글은 800개의 마이크로서비스 시스템에서 오류 처리를 위해 적용한 재시도 기능으로 인해 발생한 문제들을 다룬다.  
+  
+개발자는 주문 서비스의 시간초과 오류를 해결하기 위해 간단한 재시도 루프를 구현했으나, 이러한 재시도가 '재시도 폭풍'을 일으킬 수 있다는 피드백을 받았고, 이를 방지하기 위해 지수적 백오프(exponential backoff)와 지터(jitter)를 구현하여 문제를 해결했다고 생각한다.  
+  
+그러나 시스템의 규모가 성장했을 때, 1시간 동안 전체 백엔드가 다운되는 사고가 발생했고, 문제가 되는 버전을 10분 만에 롤백했지만 시스템은 회복되지 않았다. 트래픽을 사용자의 1%로 제한한 후에야 시스템이 복구되기 시작했다.  
+  
+분석 결과, 백오프와 지터 방식은 부하 증폭을 해결하지 않고 단순히 지연시킬 뿐이었다. 원인이 제거된 후에도 재시도로 인한 부하 증폭이 시스템 복구를 방해했으며, 재시도가 없었다면 시스템은 원인 제거 후 거의 즉시 복구될 수 있었다.  
+    
+이 문제를 해결하기 위해 3가지 방법을 테스트 했다.  
+1. 재시도 회로 차단기(Retry Circuit Breaker): 서비스 오류 비율이 특정 임계값을 초과하면 재시도를 비활성화  
+2. 재시도 예산(Retry Budget): 항상 재시도를 허용하되, 성공 요청 수의 일정 비율 내로 제한  
+3. 데드라인 전파(Deadline Propagation): 클라이언트가 각 요청에 대한 최대 응답 시간을 지정하고, 이 시간이 만료되면 요청을 중단  
+  
+최종적으로 팀은 10% 임계값으로 재시도 예산 기술을 채택했고, 이후 다른 장애가 발생했지만 재시도로 인한 증폭은 관찰되지 않았다.  
+  
+이 사례는 "일시적인 오류가 발생하면 재시도를 추가하라"는 접근법이 생각보다 위험할 수 있음을 보여준다. 재시도는 신중하게 구현하고 적절히 제한해야 시스템 안정성을 개선할 수 있다.  
+
+
+### 주요 개념/용어
+- Edge case: 정상적인 입력이나 동작 범위의 극한 값 또는 조건에서 발생하는 문제    
+- Corner case: 여러 조건이 동시에 비정상적인 상태로 겹칠 때 발생하는 예외적인 상황    
+- Retry Storm: 서비스에 문제가 발생했을 때, 다수의 클라이언트가 동시에 재시도를 수행하여 부하를 급격히 증가시키는 현상    
+- Exponential Backoff: 재시도 간격을 점점 길게 설정하는 전략    
+- Jitter: 재시도 간격에 무작위성을 추가하는 기법  
+- Open-loop: 출력 결과에 대한 피드백 없이 고정된 방식으로 계속 동작하는 구조  
+- closed-loop: 출력 결과나 시스템 상태에 대한 피드백을 반영하여 동작 조절  
+- Metastable Failure State, MFS: 시스템이 장애 원인이 제거된 후에도 자체적으로 회복하지 못하는 상태  
+- Load Amplification: 재시도로 인해 서버가 처리해야할 요청이 증가하는 현상  
+- Retry Circuit Breaker: 서비스 오류 비율이 임계값을 초과하면 재시도를 비활성화하는 패턴  
+- Retry Budget: 성공한 요청수의 일정 비율 이내로 재시도를 재한하는 방식  
+- Deadline Propagation: 클라이언트가 각 요청에 최대 응답시간을 지정하고, 서버가 이 시간 초과 시 요청을 중단하는 기법  
+
+### 중요 포인트
+"Sometimes, a seemingly simple and obvious solution can lead to a series of problems later on"  
+
+어떤 문제들은 단순한 해결책이 명확하게 보일 떄가 있다. 예를들어, 같은 데이터를 반복해서 불러오는데 속도가 느리면 자연스럽게 캐시를 도입하는 경우처럼 말이다. 재시도도 일시적인 오류가 발생하면 재시도를 추가하면 된다고 생각하기 쉽지만, 충분한 시뮬레이션이나 고려 없이 단순한 해결책만 적용했을 때는 오히려 더 큰 문제를 가져오기도 한다.  
+
+### 고찰
+문제를 해결하기 위해 기술을 도입하거나 로직을 변경할 때, 발생할 수 있는 문제들을 미리 예측하려고 노력하지만, 그건 정말 어려운 일인 것 같다.    
+결국 이런 감각은 경험을 하면서 쌓이는 거라고 생각한다.    
+앞으로도 계속 경험을 쌓아가게 될텐데, 문제를 해결하는 방식이 가져올 수 있는 부작용까지 예측할 수 있는 시니어 엔지니어가 될 수 있도록 계속 노력해야겠다.  
+
+### 관련 글
+- [Retry Storm antipattern](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/retry-storm/)  
+- [Retry with backoff pattern](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/retry-backoff.html)
+- [Open-loop and closed-loop](https://en.wikipedia.org/wiki/Control_loop#Open-loop_and_closed-loop)  
+- [What is Backoff For?](https://brooker.co.za/blog/2022/08/11/backoff.html)
+- [Exponential Backoff And Jitter](https://aws.amazon.com/ko/blogs/architecture/exponential-backoff-and-jitter/)
+- [Postmortem Culture: Learning from Failure](https://sre.google/sre-book/postmortem-culture/)
 
 ---
 
