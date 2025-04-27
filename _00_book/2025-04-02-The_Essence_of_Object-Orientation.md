@@ -10,7 +10,7 @@ mermaid: true
 ---
 
 > ##### 책 정보
-> [객체지향의 사실과 오해 - 위키북스](https://www.yes24.com/Product/Goods/142954828)  
+> [객체지향의 사실과 오해 - 위키북스](https://product.kyobobook.co.kr/detail/S000001628109)  
 > 저자: 조영호    
 > 총 페이지 수: 260  
 

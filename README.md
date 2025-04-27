@@ -3,14 +3,16 @@
 
 ## Challenge
 ### 2025
-- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/01_challenge/2025-04-09-daily_articles/)
-- [매일 기술 면접 답변하기 v2](https://han-chunsik.github.io/books/books/2025-04-27-daily_interview.html)
+- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/01_challenge/2025-04-09-daily_articles/daily_articles.html)
+- [매일 기술 면접 답변하기 v2](https://han-chunsik.github.io/books/01_challenge/2025-04-27-daily_interview/daily_interview.html)
+
+---
 
 ## Books
 
-[자바 코드의 품질을 높이는 100가지 방법(~ing)](https://product.kyobobook.co.kr/detail/S000215892971)|[객체지향의 사실과 오해](https://product.kyobobook.co.kr/detail/S000001628109)|제목|
+[자바 코드의 품질을 높이는 100가지 방법(~ing)](https://product.kyobobook.co.kr/detail/S000215892971)|[객체지향의 사실과 오해](https://product.kyobobook.co.kr/detail/S000001628109)|[컴퓨터 밑바닥의 비밀(~ing)](https://product.kyobobook.co.kr/detail/S000212650856)|
 |:---:|:---:|:---:|
-|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791169213486.jpg" width="260" height="350"/> <br> [👀 MORE 👀](https://han-chunsik.github.io/books/books/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them.html)|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788998139766.jpg" width="260" height="350"/> <br> [👀 MORE 👀](https://han-chunsik.github.io/books/books/2025-04-02-The_Essence_of_Object-Orientation.html)|책이미지|
+|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791169213486.jpg" width="260" height="350"/> <br> [👀 MORE 👀](https://han-chunsik.github.io/books/00_book/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them/100_Java_Mistakes_and_How_to_Avoid_Them.html)|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788998139766.jpg" width="260" height="350"/> <br> [👀 MORE 👀](https://han-chunsik.github.io/books/00_book/2025-04-02-The_Essence_of_Object-Orientation/The_Essence_of_Object-Orientation.html)|<img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791140708819.jpg" width="260" height="350"/> <br> [👀 MORE 👀]()|
 
 
 ## 독서로 성장하기 위한 규칙
