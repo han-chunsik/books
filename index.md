@@ -15,13 +15,20 @@ layout: home
 - [자바 코드의 품질을 높이는 100가지 방법(~ing)](https://han-chunsik.github.io/books/books/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them.html)
 - [객체지향의 사실과 오해](https://han-chunsik.github.io/books/books/2025-04-02-The_Essence_of_Object-Orientation.html) 
 
+---
+
 ## Challenge
 ### 2025
 - [아티클 읽기 - 4월](https://han-chunsik.github.io/books/books/2025-04-09-daily_articles.html)
+- [매일 기술 면접 답변하기 v2](https://han-chunsik.github.io/books/books/2025-04-27-daily_interview.html)
+
+---
 
 ## Life
 ### 2025
 - [4월](https://han-chunsik.github.io/books/books/2025-04-21-april-life.html)
 
+---
+
 ## Archive
-- [매일 기술 면접 답변하기](https://han-chunsik.github.io/books/books/2025-04-09-daily_interview.html)
+- [매일 기술 면접 답변하기 v1](https://han-chunsik.github.io/books/books/2025-04-09-daily_interview.html)
