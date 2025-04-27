@@ -14,7 +14,7 @@ layout: home
 ## Book
 - [자바 코드의 품질을 높이는 100가지 방법(~ing)](https://han-chunsik.github.io/books/00_book/2025-03-25-100_Java_Mistakes_and_How_to_Avoid_Them/100_Java_Mistakes_and_How_to_Avoid_Them.html)
 - [객체지향의 사실과 오해](https://han-chunsik.github.io/books/00_book/2025-04-02-The_Essence_of_Object-Orientation/The_Essence_of_Object-Orientation.html) 
-- [컴퓨터 밑바닥의 비밀(~ing)]()
+- [컴퓨터 밑바닥의 비밀(~ing)](https://han-chunsik.github.io/books/00_book/2025-04-27_The_Secret_of_the_Underlying_Computer/2025-04-27_The_Secret_of_the_Underlying_Computer.html)
 
 ---
 
