@@ -3,7 +3,7 @@
 
 ## Challenge
 ### 2025
-- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/books/2025-04-09-daily_articles.html)
+- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/01_challenge/2025-04-09-daily_articles/)
 - [매일 기술 면접 답변하기 v2](https://han-chunsik.github.io/books/books/2025-04-27-daily_interview.html)
 
 ## Books

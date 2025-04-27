@@ -52,9 +52,18 @@ exclude:
   - _drafts
 
 collections:
-  pages:
+  00_book:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path/:title:output_ext
+  01_challenge:
+    output: true
+    permalink: /:collection/:path/:title:output_ext
+  98_life:
+    output: true
+    permalink: /:collection/:path/:title:output_ext
+  99_archive:
+    output: true
+    permalink: /:collection/:path/:title:output_ext
 
 page_width: 800px
 

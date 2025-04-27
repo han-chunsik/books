@@ -1,5 +1,5 @@
 ---
-title: Life - 4월
+title: Life - 2025.04
 author: 한춘식
 date: 2025-04-21
 category: books

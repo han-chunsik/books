@@ -1,5 +1,5 @@
 ---
-title: 객체지향의 사실과 오해
+title: Book - 객체지향의 사실과 오해
 author: 한춘식
 date: 2025-04-02
 category: books

@@ -1,8 +1,8 @@
 ---
-title: 2025 챌린지 - 매일 아티클 읽기 4월
+title: Challenge - 매일 아티클 읽기_2025-04
 author: 한춘식
 date: 2025-04-09
-category: books
+category: challenge
 layout: post
 toc:
     enabled: true

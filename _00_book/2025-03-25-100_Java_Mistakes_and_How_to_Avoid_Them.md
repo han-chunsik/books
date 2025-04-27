@@ -1,8 +1,8 @@
 ---
-title: 자바 코드의 품질을 높이는 100가지 방법
+title: Book - 자바 코드의 품질을 높이는 100가지 방법
 author: 한춘식
 date: 2025-03-25
-category: books
+category: book
 layout: post
 ---
 

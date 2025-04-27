@@ -1,5 +1,5 @@
 ---
-title: (Archive)2025 챌린지 - 매일 기술 면접 답변하기 v1
+title: Archive - 매일 기술 면접 답변하기 v1_2025-04
 author: 한춘식
 date: 2025-04-09
 category: books

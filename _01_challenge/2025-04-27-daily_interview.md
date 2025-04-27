@@ -1,5 +1,5 @@
 ---
-title: 2025 챌린지 - 매일 기술 면접 답변하기 v2
+title: Challenge - 매일 기술 면접 답변하기 v2_2025-05
 author: 한춘식
 date: 2025-04-27
 category: books
