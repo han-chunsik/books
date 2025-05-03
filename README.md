@@ -3,7 +3,7 @@
 
 ## Challenge
 ### 2025
-- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/01_challenge/2025-04-09-daily_articles/daily_articles.html)
+- [아티클 읽기 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-05-03-daily_articles/daily_articles.html)
 - [매일 기술 면접 답변하기 v2 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-04-27-daily_interview/daily_interview.html)
 
 ---
@@ -55,4 +55,10 @@
 | ⭐⭐☆☆☆ (2) | 부분적으로 이해 — 대략적인 흐름은 알지만, 중요한 내용은 놓침 |
 | ⭐⭐⭐☆☆ (3) | 보통 이해 — 핵심 아이디어는 이해했지만 설명하기엔 부족 |
 | ⭐⭐⭐⭐☆ (4) | 잘 이해함 — 내용 정리 가능, 일부는 설명도 가능 |
-| ⭐⭐⭐⭐⭐ (5) | 완벽하게 이해 — 다른 사람에게 설명하거나 글로 정리 가능할 정도 |
+| ⭐⭐⭐⭐⭐ (5) | 완벽하게 이해 — 다른 사람에게 설명하거나 글로 정리 가능할 정도 |  
+
+---
+
+## Archive
+- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/99_archive/2025-04-09-daily_articles/daily_articles.html)
+- [기술 면접 답변하기 v1](https://han-chunsik.github.io/books/99_archive/2025-04-09-daily_interview/daily_interview.html)

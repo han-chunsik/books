@@ -1,5 +1,5 @@
 ---
-title: Challenge - 매일 아티클 읽기_2025-04
+title: Archive - 아티클 읽기_2025-04
 author: 한춘식
 date: 2025-04-09
 category: challenge
@@ -7,21 +7,7 @@ layout: post
 toc:
     enabled: true
 mermaid: true
----  
-
-
-# Keep
-- [AI 세계에서 DevOps의 미래](https://lablabs.io/blog/future-of-devops-in-the-world-of-ai)  
-- [7개월간의 자바/스프링 독학 회고](https://velog.io/@backfox/7%EA%B0%9C%EC%9B%94%EA%B0%84%EC%9D%98-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%94%84%EB%A7%81-%EB%8F%85%ED%95%99-%ED%9A%8C%EA%B3%A0-2021.11-2022.07)  
-- [엔지니어링 리더십의 다양한 스타일](https://blog.practicalengineering.management/different-styles-of-engineering-leadership-8f376ee6a406)
-- [‘kubectl create pod’를 실행하면 발생하는 일](https://medium.com/daangn/kubectl-create-pod%EB%A5%BC-%EC%8B%A4%ED%96%89%ED%95%98%EB%A9%B4-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%9D%BC-kube-apiserver-%EA%B0%90%EC%82%AC-%EB%A1%9C%EA%B7%B8-audig-log-%EB%A1%9C-%EC%97%BF%EB%B3%B4%EA%B8%B0-6f01487abdda)
-
-
 ---
-
-<br>
-<br>
-<br>
 
 # 2025.04.25
 ## 좋은 재시도, 나쁜 재시도(Good Retry, Bad Retry: An Incident Story)

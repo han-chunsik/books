@@ -20,8 +20,8 @@ layout: home
 
 ## Challenge
 ### 2025
-- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/01_challenge/2025-04-09-daily_articles/daily_articles.html)
-- [매일 기술 면접 답변하기 v2 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-04-27-daily_interview/daily_interview.html)
+- [기술 면접 답변하기 v2 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-05-03-daily_interview/daily_interview.html)
+- [아티클 읽기 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-04-09-daily_articles/daily_articles.html)
 
 ---
 
@@ -32,4 +32,5 @@ layout: home
 ---
 
 ## Archive
-- [매일 기술 면접 답변하기 v1](https://han-chunsik.github.io/books/99_archive/2025-04-09-daily_interview/daily_interview.html)
+- [아티클 읽기 - 4월](https://han-chunsik.github.io/books/99_archive/2025-04-09-daily_articles/daily_articles.html)
+- [기술 면접 답변하기 v1](https://han-chunsik.github.io/books/99_archive/2025-04-09-daily_interview/daily_interview.html)
