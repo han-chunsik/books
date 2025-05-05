@@ -3,8 +3,8 @@
 
 ## Challenge
 ### 2025
+- [기술 면접 답변하기 v2 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-04-27-daily_interview/daily_interview.html)
 - [아티클 읽기 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-05-03-daily_articles/daily_articles.html)
-- [매일 기술 면접 답변하기 v2 - 5월](https://han-chunsik.github.io/books/01_challenge/2025-04-27-daily_interview/daily_interview.html)
 
 ---
 

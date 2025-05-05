@@ -12,6 +12,110 @@ mermaid: true
 > [매일메일 구독 서비스](https://www.maeil-mail.kr/)
 
 ---
+
+<br>
+<br>
+<br>
+
+# 2025.05.05
+## 일급 컬렉션이 무엇인가요?
+### 정의
+- 일급 컬렉션(First-class Conllection)은 객체 지향 프로그래밍에서 컬렉션을 하나의 클래스로 포장하여 관련 동작과 책임을 함께 캡슐화하는 것을 의미한다.
+
+### 왜 필요할까?
+1. 비즈니스 규칙 캡슐화: 컬렉션에 적용되는 비즈니스 규칙을 한 곳에서 관리할 수 있다.
+2. 데이터와 로직의 응집도 향상: 데이터(컬렉션)와 그 데이터를 다루는 로직이 함께 존재하여 응집도가 높아진다.
+3. 불변성 보장: 컬렉션을 불변 객체로 만들어 안전한 프로그래밍이 가능하다.
+4. 명확한 의미 전달: 컬렉션의 의도와 목적을 명확히 표현할 수 있다.
+
+### 장/단점
+- 장점
+    - 캡슐화 강화: 컬렉션 조작을 클래스 내부로 제한하여 일관성 유지
+    - 높은 응집도: 관련 기능이 한 곳에 모여 코드 관리가 용이
+    - 의미있는 이름 사용: List<User> 대신 UserGroup과 같은 도메인 용어 사용
+    - 비즈니스 규칙 명확화: 컬렉션 관련 제약조건을 코드로 표현
+    - 테스트 용이성: 컬렉션 관련 동작을 독립적으로 테스트 가능
+    - 변경에 유연: 내부 구현 변경이 외부에 영향을 주지 않음
+
+- 단점
+    - 코드량 증가: 간단한 컬렉션도 별도 클래스 필요
+    - 학습 곡선: 패턴에 익숙하지 않은 개발자에게 진입장벽 존재
+    - 경미한 성능 오버헤드: 추가적인 객체 생성으로 인한 부담
+    - 과도한 추상화 위험: 모든 컬렉션에 적용 시 불필요한 복잡성 초래
+
+### 코드 수정
+```java
+// 기존 코드
+@Transactional
+public void activateSeatList(List<Long> seatIdList) {
+    seatIdList.stream()
+        .map(seatId -> concertSeatRepository.findSeatById(seatId).orElse(null))
+            .filter(Objects::nonNull)
+            .forEach(seat -> {seat.setSeatAvailable();
+            concertSeatRepository.save(seat);
+        });
+}
+```
+
+```java
+...
+// 1. 일급 클래스 생성
+public class SeatIds {
+    private final List<Long> values;
+
+    public SeatIds(List<Long> values) {
+        this.values = new ArrayList<>(values);
+    }
+
+    public List<Long> getValues() {
+        return Collections.unmodifiableList(values);
+    }
+}
+...
+
+...
+// 2. 컬렉션 객체 생성
+public class Seats {
+    private final List<ConcertSeat> seats;
+
+    public Seats(List<ConcertSeat> seats) {
+        this.seats = new ArrayList<>(seats);
+    }
+
+    public void activateAll() {
+        seats.forEach(ConcertSeat::setSeatAvailable);
+    }
+
+    public List<ConcertSeat> getSeats() {
+        return Collections.unmodifiableList(seats);
+    }
+}
+...
+
+...
+// 3. 서비스 수정
+@Transactional
+public void activateSeatList(SeatIds seatIds) {
+    List<ConcertSeat> foundSeats = seatIds.getValues().stream()
+        .map(seatId -> concertSeatRepository.findSeatById(seatId).orElse(null))
+        .filter(Objects::nonNull)
+        .collect(Collectors.toList());
+
+    Seats seats = new Seats(foundSeats);
+    seats.activateAll();
+
+    concertSeatRepository.saveAll(seats.getSeats());
+}
+...
+```
+
+
+---
+
+<br>
+<br>
+<br>
+
 #  2025.04.28
 ## Spring Data JPA에서 새로운 Entity인지 판단하는 방법은 무엇일까요?  
 ### 왜 구분이 필요할까?  
